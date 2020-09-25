@@ -1,2 +1,2 @@
-# Registration_Admin
-This My New Repositry
+# CIMS
+This repository is created to manage CIMS
