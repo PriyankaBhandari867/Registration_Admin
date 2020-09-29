@@ -50,6 +50,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\ActiveUser.cs" />
+    <Compile Include="Account\AdminRegister.cs" />
+    <Compile Include="Account\AdminRegister\Admin.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Admin.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Account\AdminRegister\Admin.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Admin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Account\AdminRegister\Admin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Admin.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\AdminRegister\AdminRegister.cs">
+      <DependentUpon>Admin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Account\AdminRegister\City.cs">
+      <DependentUpon>Admin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Account\AdminRegister\Country.cs">
+      <DependentUpon>Admin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Account\AdminRegister\StateTable.cs">
+      <DependentUpon>Admin.tt</DependentUpon>
+    </Compile>
     <Compile Include="Account\LoginRequest.cs" />
     <Compile Include="Account\UserRegisterModel.cs" />
     <Compile Include="Account\UserRegister\User.cs">
@@ -89,6 +117,13 @@
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
+    <EntityDeploy Include="Account\AdminRegister\Admin.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Admin.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Account\AdminRegister\Admin.edmx.diagram">
+      <DependentUpon>Admin.edmx</DependentUpon>
+    </None>
     <None Include="Account\UserRegister\UserInfo.edmx.diagram">
       <DependentUpon>UserInfo.edmx</DependentUpon>
     </None>
@@ -96,6 +131,16 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Account\AdminRegister\Admin.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Admin.edmx</DependentUpon>
+      <LastGenOutput>Admin.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Account\AdminRegister\Admin.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Admin.edmx</DependentUpon>
+      <LastGenOutput>Admin.cs</LastGenOutput>
+    </Content>
     <Content Include="Account\UserRegister\UserInfo.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>UserInfo.edmx</DependentUpon>
@@ -110,6 +155,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

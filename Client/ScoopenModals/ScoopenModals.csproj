@@ -50,11 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\ActiveUser.cs" />
+    <Compile Include="Account\AdminRegisterModel.cs" />
     <Compile Include="Account\LoginRequest.cs" />
     <Compile Include="Account\UserRegisterModel.cs" />
     <Compile Include="Notifications\LoginDetailsSmsRequest.cs" />
     <Compile Include="Notifications\SmsOtpRequest.cs" />
-    <Compile Include="Notifications\SmsOtpResponse.cs" />
+    <Compile Include="Account\SmsOtpResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Account\Role.cs" />
     <Compile Include="Account\User.cs" />
